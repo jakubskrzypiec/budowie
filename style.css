@@ -18,37 +18,11 @@ a{color:inherit;text-decoration:none}
 .shade{z-index:2;background:linear-gradient(90deg,rgba(11,12,15,.86) 0%,rgba(11,12,15,.66) 32%,rgba(11,12,15,.30) 66%,rgba(11,12,15,.42) 100%),linear-gradient(0deg,rgba(9,10,12,.58),transparent 48%)}
 .grid{z-index:3;pointer-events:none;opacity:.14;background-image:linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.10) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.44) 58%,transparent 94%)}
 
-/* Clean header: full wordmark, no low-resolution round badge */
-.topbar{
-  position:absolute;
-  z-index:6;
-  top:0;
-  left:0;
-  right:0;
-  height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  padding:0 clamp(28px,4.8vw,84px);
-  background:linear-gradient(180deg,rgba(9,10,12,.56),rgba(9,10,12,.34));
-  border-bottom:1px solid rgba(255,255,255,.10);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-}
-.brand{
-  display:flex;
-  align-items:center;
-  width:max-content;
-  height:76px;
-}
-.brand img{
-  display:block;
-  width:clamp(176px,13vw,224px);
-  height:auto;
-  object-fit:contain;
-  filter:drop-shadow(0 5px 16px rgba(0,0,0,.16));
-  image-rendering:auto;
-}
+/* Header with the same elegant light tone as the main landing page */
+.topbar{position:absolute;z-index:6;top:0;left:0;right:0;height:78px;display:flex;align-items:center;justify-content:flex-start;padding:0 clamp(22px,4vw,68px);background:rgba(216,212,205,.86);border-bottom:1px solid rgba(36,63,116,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 8px 22px rgba(0,0,0,.10)}
+.topbar::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,rgba(36,63,116,.0) 0%, rgba(36,63,116,.52) 22%, rgba(209,163,33,.78) 50%, rgba(36,63,116,.52) 78%, rgba(36,63,116,.0) 100%);opacity:.92}
+.brand{display:flex;align-items:center;width:max-content;height:78px;position:relative;z-index:1}
+.brand img{width:70px;height:70px;object-fit:contain;filter:drop-shadow(0 3px 10px rgba(0,0,0,.12));image-rendering:auto}
 .top-meta{display:none}
 
 .content{position:absolute;z-index:5;left:clamp(28px,6.5vw,108px);bottom:clamp(68px,9vh,104px);max-width:760px}
@@ -62,19 +36,19 @@ h1 em{font-style:normal;color:#fff}
 .links a:hover{border-color:#fff;color:#fff}
 .links span{color:rgba(255,255,255,.74)}
 
-/* Transparent social bubbles + logo-shaped tears */
+/* Transparent social bubbles with brand-color accents */
 .socials{position:absolute;z-index:6;right:clamp(24px,4vw,64px);bottom:clamp(30px,5vh,54px);width:min(330px,25vw);display:grid;gap:12px}
-.social-row{display:grid;grid-template-columns:1fr auto;gap:14px 18px;align-items:center;padding:15px 15px 15px 18px;background:rgba(10,10,12,.24);border:1px solid rgba(255,255,255,.11);border-radius:18px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 16px 34px rgba(0,0,0,.13);transition:transform .24s ease,border-color .24s ease,background .24s ease}
-.social-row:hover{transform:translateY(-2px);background:rgba(10,10,12,.31);border-color:rgba(255,255,255,.19)}
+.social-row{position:relative;display:grid;grid-template-columns:1fr auto;gap:14px 18px;align-items:center;padding:15px 15px 15px 18px;background:rgba(12,12,14,.24);border:1px solid rgba(255,255,255,.12);border-radius:18px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 16px 34px rgba(0,0,0,.13);transition:transform .24s ease,border-color .24s ease,background .24s ease, box-shadow .24s ease;overflow:hidden}
+.social-row::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(180deg,var(--gold),rgba(209,163,33,.18));opacity:.95}
+.social-row:hover{transform:translateY(-2px);background:rgba(12,12,14,.31);border-color:rgba(209,163,33,.28);box-shadow:0 18px 40px rgba(0,0,0,.18)}
 .social-copy strong{display:block;font-size:12px;font-weight:700;color:#fff}
-.social-copy span{display:block;margin-top:4px;font-size:10px;font-weight:500;color:rgba(255,255,255,.62)}
-.social-tear{width:46px;height:46px;display:grid;place-items:center;border-radius:50% 50% 0 50%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.06);transition:background .24s ease,border-color .24s ease,transform .24s ease}
-.social-row:hover .social-tear{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);transform:scale(1.035)}
+.social-copy span{display:block;margin-top:4px;font-size:10px;font-weight:500;color:rgba(255,255,255,.66)}
+.social-tear{width:46px;height:46px;display:grid;place-items:center;border-radius:50% 50% 50% 0;background:rgba(36,63,116,.26);border:1px solid rgba(209,163,33,.45);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.social-row:hover .social-tear{background:rgba(36,63,116,.34);border-color:rgba(209,163,33,.7)}
 .social-tear svg{width:18px;height:18px}
 .social-tear svg path{fill:currentColor;stroke:none}
 .social-tear svg rect,.social-tear svg circle{fill:none;stroke:currentColor;stroke-width:1.8}
 .social-tear svg circle:last-child{fill:currentColor;stroke:none}
-
 @media(max-width:900px){
   .socials{width:min(280px,42vw);right:20px;bottom:20px}
   .social-tear{width:42px;height:42px}
@@ -82,9 +56,9 @@ h1 em{font-style:normal;color:#fff}
 @media(max-width:780px){
   body{overflow:auto}
   .build-page{min-height:620px}
-  .topbar{height:66px;padding:0 18px}
-  .brand{height:66px}
-  .brand img{width:174px;height:auto}
+  .topbar{height:70px;padding:0 18px}
+  .brand{height:70px}
+  .brand img{width:58px;height:58px}
   .top-meta{font-size:8px;letter-spacing:.18em}
   .content{left:20px;right:20px;bottom:30px;max-width:none}
   .kicker{font-size:8px;margin-bottom:16px}
@@ -97,9 +71,13 @@ h1 em{font-style:normal;color:#fff}
   .shade{background:linear-gradient(0deg,rgba(9,10,12,.92) 0%,rgba(9,10,12,.59) 48%,rgba(9,10,12,.25) 100%)}
 }
 @media(max-height:650px) and (min-width:781px){
-  .topbar{height:64px}.brand{height:64px}.brand img{width:168px;height:auto}
+  .topbar{height:68px}.brand{height:68px}.brand img{width:56px;height:56px}
   .content{bottom:44px}
   h1{font-size:clamp(52px,7vw,88px)}
   .lead{margin-top:17px}.links{margin-top:20px}.socials{bottom:18px}
 }
 @media(prefers-reduced-motion:reduce){.slide{transition:none}}
+
+.links a span{color:var(--gold)}
+.links a:hover{border-color:rgba(209,163,33,.82);color:#fff}
+.kicker{color:rgba(255,255,255,.76)}
