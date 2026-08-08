@@ -21,15 +21,6 @@ a{color:inherit;text-decoration:none}
 .shade{z-index:2;background:linear-gradient(90deg,rgba(11,12,15,.86) 0%,rgba(11,12,15,.66) 32%,rgba(11,12,15,.30) 66%,rgba(11,12,15,.42) 100%),linear-gradient(0deg,rgba(9,10,12,.58),transparent 48%)}
 .grid{z-index:3;pointer-events:none;opacity:.14;background-image:linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.10) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.44) 58%,transparent 94%)}
 
-/* Logo — original mark with white lettering for maximum contrast */
-.topbar{position:absolute;z-index:6;top:0;left:0;right:auto;width:290px;height:235px;display:block;padding:0;background:transparent;border:0;pointer-events:none}
-.topbar::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 31% 31%,rgba(7,8,10,.30) 0%,rgba(7,8,10,.18) 30%,rgba(7,8,10,.06) 52%,rgba(7,8,10,0) 72%);pointer-events:none}
-.topbar::after{display:none}
-.brand{position:absolute;z-index:2;top:23px;left:clamp(20px,3.2vw,42px);display:block;width:max-content;height:auto;padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;pointer-events:auto}
-.brand::before{display:none}
-.brand img{display:block;width:108px;height:auto;max-width:none;object-fit:initial;filter:drop-shadow(0 2px 4px rgba(0,0,0,.82)) drop-shadow(0 6px 16px rgba(0,0,0,.28));image-rendering:auto}
-.top-meta{display:none}
-
 .content{position:absolute;z-index:5;left:clamp(28px,6.5vw,108px);bottom:clamp(62px,8.5vh,96px);max-width:760px}
 .kicker{display:flex;align-items:center;gap:13px;margin-bottom:20px;font-size:9px;letter-spacing:.22em;font-weight:700;color:rgba(255,255,255,.72)}
 .kicker span{width:44px;height:2px;background:var(--accent)}
@@ -61,11 +52,6 @@ h1 em{font-style:normal;color:var(--accent-solid)}
 @media(max-width:780px){
   body{overflow:auto}
   .build-page{min-height:620px}
-  .topbar{top:0;left:0;width:210px;height:175px}
-  .topbar::before{background:radial-gradient(circle at 29% 28%,rgba(7,8,10,.32) 0%,rgba(7,8,10,.18) 32%,rgba(7,8,10,.06) 54%,rgba(7,8,10,0) 74%)}
-  .brand{top:14px;left:14px;padding:0;border-radius:0}
-  .brand img{width:82px;height:auto}
-  .top-meta{font-size:8px;letter-spacing:.18em}
   .content{left:20px;right:20px;bottom:30px;max-width:none}
   .kicker{font-size:8px;margin-bottom:16px}
   h1{font-size:clamp(52px,15vw,78px);line-height:.87}
@@ -84,7 +70,6 @@ h1 em{font-style:normal;color:var(--accent-solid)}
   .shade{background:linear-gradient(0deg,rgba(9,10,12,.92) 0%,rgba(9,10,12,.59) 48%,rgba(9,10,12,.25) 100%)}
 }
 @media(max-height:650px) and (min-width:781px){
-  .topbar{top:0;left:0;width:190px;height:155px}.brand{top:12px;left:14px;padding:0;border-radius:0}.brand img{width:78px;height:auto}
   .content{bottom:44px}
   h1{font-size:clamp(52px,7vw,88px)}
   .lead{margin-top:17px}.links{margin-top:20px}.socials{bottom:18px}
