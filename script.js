@@ -1,13 +1,9 @@
-(() => {
-  const slides = [...document.querySelectorAll('.slide')];
-  const current = document.getElementById('current');
-  if (!slides.length) return;
-  let index = 0;
-  const delay = 8000;
-  setInterval(() => {
-    slides[index].classList.remove('is-active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('is-active');
-    if (current) current.textContent = String(index + 1).padStart(2, '0');
-  }, delay);
-})();
+const slides=[...document.querySelectorAll('.slide')];
+let current=0;
+const delay=8000;
+function nextSlide(){
+  slides[current].classList.remove('is-active');
+  current=(current+1)%slides.length;
+  slides[current].classList.add('is-active');
+}
+setInterval(nextSlide,delay);
