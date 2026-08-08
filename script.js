@@ -2,10 +2,8 @@
   const slides = [...document.querySelectorAll('.slide')];
   const current = document.getElementById('current');
   if (!slides.length) return;
-
   let index = 0;
-  const delay = 7000;
-
+  const delay = 8000;
   setInterval(() => {
     slides[index].classList.remove('is-active');
     index = (index + 1) % slides.length;
