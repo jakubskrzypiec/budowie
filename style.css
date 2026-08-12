@@ -1,3 +1,17 @@
+@font-face{
+  font-family:"Gill Sans MT";
+  src:url("fonts/gill-sans-mt.woff") format("woff");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+@font-face{
+  font-family:"ISOCTEUR";
+  src:url("fonts/isocteur.woff") format("woff");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
 :root{
   --navy:#243f74;
   --gold:#d1a321;
@@ -6,8 +20,8 @@
   --accent-ink:#20252b;
   --white:#f7f5ef;
   --line:rgba(255,255,255,.16);
-  --sans:"Manrope",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --serif:"Newsreader",Georgia,serif;
+  --sans:"Gill Sans MT","Gill Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --technical:"ISOCTEUR","Gill Sans MT",sans-serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0;width:100%;min-height:100%;background:#101010;color:var(--white);font-family:var(--sans)}
@@ -21,14 +35,13 @@ a{color:inherit;text-decoration:none}
 .shade{z-index:2;background:linear-gradient(90deg,rgba(11,12,15,.86) 0%,rgba(11,12,15,.66) 32%,rgba(11,12,15,.30) 66%,rgba(11,12,15,.42) 100%),linear-gradient(0deg,rgba(9,10,12,.58),transparent 48%)}
 .grid{z-index:3;pointer-events:none;opacity:.14;background-image:linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.10) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.44) 58%,transparent 94%)}
 
-.content{position:absolute;z-index:5;left:clamp(28px,6.5vw,108px);bottom:clamp(62px,8.5vh,96px);max-width:760px}
-.kicker{display:flex;align-items:center;gap:13px;margin-bottom:20px;font-size:9px;letter-spacing:.22em;font-weight:700;color:rgba(255,255,255,.72)}
-.kicker span{width:44px;height:2px;background:var(--accent)}
-h1{margin:0;font-family:var(--serif);font-size:clamp(62px,7.6vw,122px);line-height:.84;letter-spacing:-.055em;font-weight:500;color:var(--accent-solid)}
+.content{position:absolute;z-index:5;left:clamp(28px,6.5vw,108px);bottom:clamp(62px,8.5vh,96px);max-width:720px}
+.kicker{margin-bottom:24px;font-family:var(--technical);font-size:clamp(10px,.72vw,12px);line-height:1.2;letter-spacing:.19em;font-weight:400;color:rgba(255,255,255,.78)}
+h1{margin:0;font-family:var(--sans);font-size:clamp(62px,6.75vw,112px);line-height:.88;letter-spacing:-.038em;font-weight:400;color:var(--accent-solid)}
 h1 em{font-style:normal;color:var(--accent-solid)}
-.lead{max-width:610px;margin:26px 0 0;font-size:clamp(15px,1.22vw,19px);line-height:1.7;color:rgba(255,255,255,.8)}
-.links{display:flex;flex-wrap:wrap;gap:18px 34px;margin-top:30px}
-.links a{display:inline-flex;align-items:center;gap:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.42);font-size:11px;font-weight:700;letter-spacing:.04em;transition:border-color .25s ease,color .25s ease}
+.lead{max-width:600px;margin:32px 0 0;font-size:clamp(16px,1.15vw,19px);line-height:1.58;letter-spacing:.005em;color:rgba(255,255,255,.84)}
+.links{display:flex;flex-wrap:wrap;gap:18px 38px;margin-top:34px}
+.links a{display:inline-flex;align-items:center;gap:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.42);font-size:12px;font-weight:600;letter-spacing:.045em;transition:border-color .25s ease,color .25s ease}
 .links a:hover{border-color:var(--accent);color:#fff}
 .links span{color:rgba(255,255,255,.74)}
 
@@ -37,8 +50,8 @@ h1 em{font-style:normal;color:var(--accent-solid)}
 .social-row{position:relative;display:grid;grid-template-columns:1fr auto;gap:14px 18px;align-items:center;padding:15px 15px 15px 18px;background:rgba(216,212,204,.94);border:1px solid rgba(255,255,255,.16);border-radius:18px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 14px 30px rgba(0,0,0,.14);transition:transform .24s ease,border-color .24s ease,background .24s ease,box-shadow .24s ease;overflow:hidden}
 .social-row::before{content:"";position:absolute;left:0;top:18%;bottom:18%;width:2px;background:rgba(36,63,116,.30);border-radius:2px}
 .social-row:hover{transform:translateY(-2px);background:rgba(226,222,214,.97);border-color:rgba(36,63,116,.18);box-shadow:0 18px 38px rgba(0,0,0,.18)}
-.social-copy strong{display:block;font-size:12px;font-weight:700;color:var(--accent-ink)}
-.social-copy span{display:block;margin-top:4px;font-size:10px;font-weight:600;color:rgba(32,37,43,.62)}
+.social-copy strong{display:block;font-size:13px;font-weight:600;color:var(--accent-ink)}
+.social-copy span{display:block;margin-top:5px;font-size:11px;font-weight:400;color:rgba(32,37,43,.62)}
 .social-tear{width:48px;height:48px;display:grid;place-items:center;border-radius:50% 50% 0 50%;background:rgba(255,255,255,.20);border:1px solid rgba(36,63,116,.30);color:var(--navy);box-shadow:inset 0 1px 0 rgba(255,255,255,.34)}
 .social-row:hover .social-tear{background:rgba(255,255,255,.34);border-color:rgba(36,63,116,.46)}
 .social-tear svg{width:19px;height:19px}
@@ -53,16 +66,16 @@ h1 em{font-style:normal;color:var(--accent-solid)}
   body{overflow:auto}
   .build-page{min-height:620px}
   .content{left:20px;right:20px;bottom:30px;max-width:none}
-  .kicker{font-size:8px;margin-bottom:16px}
-  h1{font-size:clamp(52px,15vw,78px);line-height:.87}
-  .lead{font-size:14px;line-height:1.6;margin-top:20px;max-width:520px}
-  .links{margin-top:22px;gap:14px 22px}
-  .links a{font-size:10px}
+  .kicker{font-size:9px;letter-spacing:.14em;margin-bottom:18px}
+  h1{font-size:clamp(52px,14.5vw,76px);line-height:.9;letter-spacing:-.032em}
+  .lead{font-size:15px;line-height:1.52;margin-top:24px;max-width:520px}
+  .links{margin-top:25px;gap:14px 24px}
+  .links a{font-size:11px}
   .content{bottom:164px}
   .socials{display:grid;grid-template-columns:1fr 1fr;gap:8px;left:20px;right:20px;bottom:18px;width:auto}
   .social-row{padding:11px 10px 11px 12px;border-radius:14px;gap:8px}
-  .social-copy strong{font-size:10px}
-  .social-copy span{font-size:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:118px}
+  .social-copy strong{font-size:11px}
+  .social-copy span{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:118px}
   .social-tear{width:38px;height:38px}
   .social-tear svg{width:16px;height:16px}
   .social-tear .fb-icon{width:18px;height:18px}
