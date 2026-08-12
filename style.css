@@ -37,7 +37,7 @@ a{color:inherit;text-decoration:none}
 
 .content{position:absolute;z-index:5;left:clamp(28px,6.5vw,108px);bottom:clamp(62px,8.5vh,96px);max-width:720px}
 .kicker{margin-bottom:24px;font-family:var(--technical);font-size:clamp(10px,.72vw,12px);line-height:1.2;letter-spacing:.19em;font-weight:400;color:rgba(255,255,255,.78)}
-h1{margin:0;font-family:var(--sans);font-size:clamp(62px,6.75vw,112px);line-height:.88;letter-spacing:-.038em;font-weight:400;color:var(--accent-solid)}
+h1{margin:0;font-family:var(--technical);font-size:clamp(60px,6.45vw,106px);line-height:.92;letter-spacing:.012em;font-weight:400;color:var(--accent-solid)}
 h1 em{font-style:normal;color:var(--accent-solid)}
 .lead{max-width:600px;margin:32px 0 0;font-size:clamp(16px,1.15vw,19px);line-height:1.58;letter-spacing:.005em;color:rgba(255,255,255,.84)}
 .links{display:flex;flex-wrap:wrap;gap:18px 38px;margin-top:34px}
@@ -67,7 +67,7 @@ h1 em{font-style:normal;color:var(--accent-solid)}
   .build-page{min-height:620px}
   .content{left:20px;right:20px;bottom:30px;max-width:none}
   .kicker{font-size:9px;letter-spacing:.14em;margin-bottom:18px}
-  h1{font-size:clamp(52px,14.5vw,76px);line-height:.9;letter-spacing:-.032em}
+  h1{font-size:clamp(49px,13.5vw,72px);line-height:.94;letter-spacing:.008em}
   .lead{font-size:15px;line-height:1.52;margin-top:24px;max-width:520px}
   .links{margin-top:25px;gap:14px 24px}
   .links a{font-size:11px}
